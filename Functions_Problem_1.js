@@ -12,20 +12,22 @@ step 6: return the value of longestWord
 
 
 */
-const longestWord = "The first function problem in JavaScript";
-const myArray = longestWord.split(" ");
+
 
 
 function findLongestWord() {
+  let longestWord = "The first function problem in JavaScript";
+  const myArray = longestWord.split(" ");
+  
     myArray.forEach(arrayWords => {
-    let length = arrayWords.length;
-     console.log(arrayWords)
-     
-     
-});    
+      if (arrayWords.length > longestWord.length){
+      longestWord = arrayWords;
       
-  
-  
+    }
+      
+}    
+      
+); 
+        return longestWord;
 }
  findLongestWord(longestWord);
-
