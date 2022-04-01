@@ -16,19 +16,20 @@ step 8: Return the count of vowels
 */
 
 
-function vowelCounter(string){
-  const arrayOfLetters = string.split("");
-  let numberOfVowels = "";
-  let arrayOfVowels = arrayOfLetters.includes("a", "e", "i", "o", "u");
+function vowelCounter (passedString){
+  const arrayOfLetters = passedString.toLowerCase().split("");
+  let numberOfVowels = 0;
+  
+  const arrayOfVowels = ["a", "e", "i", "o", "u"];
   
   arrayOfLetters.forEach(letter =>{
-    if(let numberOfVowels = letter; letter = arrayOfVowels + letter)
-        numberOfVowels = letter;
+    if(arrayOfVowels.includes(letter)){
+      numberOfVowels += 1;
+    }
   
-  })
+  });
 
-  return letter;
-  
+  return numberOfVowels;
 }
 
-console.log(vowelCounter(numberOfVowels));
+console.log(vowelCounter("Another attempt at writing this code to count vowels"));
