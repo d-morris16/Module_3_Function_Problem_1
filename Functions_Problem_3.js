@@ -19,7 +19,7 @@ function numOfOccurances (wordString, letterString){
   const arrayOfLetters = wordString.toLowerCase().split("");
   
   arrayOfLetters.forEach(letter => {
-    if(arrayOfLetters.includes(letterString)){
+    if(letter.includes(letterString)){
       counter += 1;
     }
   });
@@ -28,5 +28,8 @@ function numOfOccurances (wordString, letterString){
   
 }
 
+/*
+Is there a reason as to why the triple equals is used as a solution over the includes method?
 
+*/
 console.log(numOfOccurances("The times that flies all the time", "e"));
