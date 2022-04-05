@@ -19,7 +19,7 @@ function numOfOccurances (wordString, letterString){
   const arrayOfLetters = wordString.toLowerCase().split("");
   
   arrayOfLetters.forEach(letter => {
-    if(letter.includes(letterString)){
+    if(letter === letterString){
       counter += 1;
     }
   });
