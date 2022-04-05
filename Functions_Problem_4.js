@@ -6,29 +6,30 @@
 /*
 step 1: Create a function that loops and prints from 1 to 100 and prints "Fizz", "Buzz",
 and "FizzBuzz" for multipes of 3, 5, and 3 & 5 respectfully.
-step 2: Defines arrays for multiples of 3, 5, and both 3 & 5.
-step 3: Define a variable that will print the values from the iterations
-step 3: Create a loop that will interate the integers from 1 to 100. Where if the number
-is any multiple, it will print "Fizz", "Buzz", and "FizzBuzz" in place of those numbers.
+step 2: Define a for loop that will loop from 0 to 100 with conditionals. 
+step 3: Define an empty string variable called "word".
+step 4: Create two conditionals for the loop that will print "Fizz" and "Buzz"
+step 5: Console.log the result 
 */
 
 
 
-function numOfIterations(num){
-  const multOf3 = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 
-                   54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99];
-  const multOf5 = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85,
-                  90, 95, 100];
-  const multOfBoth = [15, 30, 45, 60, 75, 90];
-  
-  
-  for(let num = 0; num <= 100; num++){
-    console.log(num);
-      if(num = multOf3) {
-        console.log("Fizz");
-      }
+function fizzBuzz() {
+  for(i = 0; i <= 100; i++) {
+    let word = "";
+    
+    if(i % 3 === 0){
+      word += "Fizz";
+    }
+    
+    if(i % 5 === 0){
+      word += "Buzz";
+    }
+    
+    console.log(i, word);
   }
-
+  
 }
 
-console.log(numOfIterations())
+
+fizzBuzz();
